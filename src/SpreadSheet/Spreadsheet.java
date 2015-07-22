@@ -292,7 +292,7 @@ public class Spreadsheet implements Runnable, ActionListener,SelectionObserver, 
 	public void update() {
 		CellIndex index = currentWorkSheetView.getSelectedIndex();
 		selectedCellLabel.setText(index.show());
-		//cellEditTextField.setText(currentWorkSheet.lookup(index).getText());	
+		cellEditTextField.setText(currentWorkSheet.lookup(index).getText());	
 		currentWorkSheetView.repaint();
 	}
 
@@ -358,14 +358,5 @@ public class Spreadsheet implements Runnable, ActionListener,SelectionObserver, 
 
 		}
 
-	}
-
-	@Override
-	public void update2() {
-		// TODO Auto-generated method stub
-		CellIndex index = currentWorkSheetView.getSelectedIndex();
-		cellEditTextField.setText(currentWorkSheet.lookup(index).getText());	
-		cellEditTextField.validate();
-		cellEditTextField.repaint();
 	}
 }
